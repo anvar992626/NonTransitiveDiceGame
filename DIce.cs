@@ -6,8 +6,8 @@ public class Dice
 
     public Dice(int[] faces)
     {
-        if (faces.Length != 6)
-            throw new ArgumentException("Each dice must have exactly 6 faces.");
+        if (faces.Length < 2)
+            throw new ArgumentException("Each dice must have at least 2 faces.");
         if (Array.Exists(faces, face => face < 0))
             throw new ArgumentException("Dice faces must be non-negative integers.");
         Faces = faces;

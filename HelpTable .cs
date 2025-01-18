@@ -6,8 +6,8 @@ public class HelpTable
     public static void Display(List<Dice> dice, double[,] probabilities)
     {
         Console.WriteLine("\nProbability Table");
-        Console.WriteLine("This table shows the probability of the user winning against the computer.");
-        Console.WriteLine("Each row represents the user's dice, and each column represents the computer's dice.\n");
+        Console.WriteLine("Rows: User's dice, Columns: Computer's dice");
+        Console.WriteLine("Each cell shows the probability of the user winning.\n");
 
         Console.Write("       ");
         for (int i = 0; i < dice.Count; i++)
@@ -19,12 +19,15 @@ public class HelpTable
             Console.Write($"Dice {i} ");
             for (int j = 0; j < dice.Count; j++)
             {
-                if (i == j)
-                    Console.Write("    -     ");
+                if (probabilities[i, j] == -1)
+                    Console.Write("    --    ");
                 else
                     Console.Write($"  {probabilities[i, j]:0.0000} ");
             }
             Console.WriteLine();
         }
+
+        Console.WriteLine("\nNote: The probabilities are calculated based on rolling all faces of both dice.");
+        Console.WriteLine("Diagonal cells (--) indicate a dice cannot play against itself.");
     }
 }

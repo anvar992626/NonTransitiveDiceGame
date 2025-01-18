@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Security.Cryptography;
 using System.Text;
+using Org.BouncyCastle.Crypto.Digests;
+using Org.BouncyCastle.Crypto.Macs;
 
 public class RandomGenerator
 {
@@ -23,18 +25,22 @@ public class RandomGenerator
             {
                 var randomNumber = new byte[4];
                 rng.GetBytes(randomNumber);
-                result = BitConverter.ToInt32(randomNumber, 0) & int.MaxValue; // Ensure positive
-            } while (result >= (int.MaxValue / range) * range); // Reject biased values
+                result = BitConverter.ToInt32(randomNumber, 0) & int.MaxValue;
+            } while (result >= (int.MaxValue / range) * range);
             return result % range;
         }
     }
 
     public static string GenerateHMAC(string key, int message)
     {
-        using (var hmac = new HMACSHA256(Encoding.UTF8.GetBytes(key)))
-        {
-            var hash = hmac.ComputeHash(Encoding.UTF8.GetBytes(message.ToString()));
-            return BitConverter.ToString(hash).Replace("-", "").ToLower();
-        }
+        var hmac = new HMac(new Sha3Digest(256));
+        var keyBytes = Convert.FromHexString(key); // Use byte array for cryptographic secux
+                                                   // rity
+        hmac.Init(new Org.BouncyCastle.Crypto.Parameters.KeyParameter(keyBytes));
+        var messageBytes = BitConverter.GetBytes(message);
+        var result = new byte[hmac.GetMacSize()];
+        hmac.BlockUpdate(messageBytes, 0, messageBytes.Length);
+        hmac.DoFinal(result, 0);
+        return BitConverter.ToString(result).Replace("-", "").ToLower();
     }
 }

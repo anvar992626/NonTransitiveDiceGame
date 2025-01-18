@@ -12,14 +12,7 @@ public class ProbabilityCalculator
         {
             for (int j = 0; j < n; j++)
             {
-                if (i == j)
-                {
-                    probabilities[i, j] = -1; // Cannot play against itself
-                }
-                else
-                {
-                    probabilities[i, j] = GetProbability(dice[i], dice[j]);
-                }
+                probabilities[i, j] = i == j ? -1 : GetProbability(dice[i], dice[j]);
             }
         }
         return probabilities;
