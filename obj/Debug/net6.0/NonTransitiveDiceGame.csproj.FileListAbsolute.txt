@@ -1,7 +1,7 @@
 C:\Users\anvar\source\repos\NonTransitiveDiceGame\NonTransitiveDiceGame\bin\Debug\net6.0\NonTransitiveDiceGame.exe
 C:\Users\anvar\source\repos\NonTransitiveDiceGame\NonTransitiveDiceGame\bin\Debug\net6.0\NonTransitiveDiceGame.dll
-C:\Users\anvar\source\repos\NonTransitiveDiceGame\NonTransitiveDiceGame\bin\Debug\net6.0\HashLib.dll
 C:\Users\anvar\source\repos\NonTransitiveDiceGame\NonTransitiveDiceGame\bin\Debug\net6.0\BouncyCastle.Crypto.dll
+C:\Users\anvar\source\repos\NonTransitiveDiceGame\NonTransitiveDiceGame\bin\Debug\net6.0\HashLib.dll
 C:\Users\anvar\source\repos\NonTransitiveDiceGame\NonTransitiveDiceGame\obj\Debug\net6.0\NonTransitiveDiceGame.csproj.AssemblyReference.cache
 C:\Users\anvar\source\repos\NonTransitiveDiceGame\NonTransitiveDiceGame\obj\Debug\net6.0\NonTransitiveDiceGame.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\anvar\source\repos\NonTransitiveDiceGame\NonTransitiveDiceGame\obj\Debug\net6.0\NonTransitiveDiceGame.AssemblyInfoInputs.cache

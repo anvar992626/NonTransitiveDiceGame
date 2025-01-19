@@ -13,8 +13,8 @@ public class DiceParser
 
         foreach (var arg in args)
         {
-            //if (!diceSet.Add(arg))
-            //    throw new ArgumentException("Error: Duplicate dice configurations are not allowed.");
+            if (!diceSet.Add(arg))
+                throw new ArgumentException("Error: Duplicate dice configurations are not allowed.");
 
             var faces = arg.Split(',');
             if (faces.Length < 6)

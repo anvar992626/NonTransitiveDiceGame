@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NonTransitiveDiceGame")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+98fdbf3c16f02b0065ca55441ac3d74318a2b400")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+093a2215000c988f90276d08ee4f1bf3afc0edf7")]
 [assembly: System.Reflection.AssemblyProductAttribute("NonTransitiveDiceGame")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NonTransitiveDiceGame")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
